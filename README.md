@@ -1,0 +1,2 @@
+# Internship-
+Javascript exercises
