@@ -1,9 +1,11 @@
 const fs = require('fs');
+const { ReadableStream } = require('node:stream/web'); // Example
+const readableStream = new ReadableStream(); // Example initialization
 
 console.log("first line of code");
 console.log("call stack is empty now");
 
-const firstPriority = Process.nextTick(() => {
+const firstPriority = process.nextTick(() => {
   console.log('first priority');
 });
 
@@ -27,6 +29,7 @@ const fifthPriority = setImmediate(() => {
     console.log('fifth priority');
 });
 
-const sixthPriority = readableStream.on(close, () => {
+/*const sixthPriority = readableStream.on(close, () => {
     console.log('sixth priority');
 });
+*/
