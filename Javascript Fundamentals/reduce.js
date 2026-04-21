@@ -7,7 +7,7 @@ const reduce = function(nums, fn, init) {
 }
 
 // Example usage:
-nums = [1,2,3,4]
-fn = function sum(accum, curr) { return accum + curr; }
-init = 0
+const nums = [1,2,3,4]
+const fn = function sum(accum, curr) { return accum + curr; }
+const init = 0
 console.log(reduce(nums, fn, init)); 
