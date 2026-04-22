@@ -9,4 +9,4 @@ const reduce = (nums: number[], fn: Function, init: number): number => {
 const nums = [1, 2, 3, 4];
 const fn = function sum(acc: number, curr: number): number { return acc + curr; };
 const init = 0;
-console.log(reduce(nums, fn, init)); 
+console.log(reduce(nums, fn, init)); // Output: 10
