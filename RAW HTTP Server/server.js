@@ -1,11 +1,12 @@
 const http = require('http');
-const { send } = require('process');
 
 let users = [
-    { id: 1, name: 'Alice' },
-    { id: 2, name: 'Bob' },
-    { id: 3, name: 'Charlie' },
+    { id: 1, name: 'Alice', email: 'alice@123.com' },
+    { id: 2, name: 'Bob', email: 'bob@123.com'},
+    { id: 3, name: 'Charlie', email: 'charlie@123.com'},
 ];
+
+let nextID = users.length + 1;
 
 const sendJson = (res, statusCode, data) => {
     const body = JSON.stringify(data);
