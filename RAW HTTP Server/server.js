@@ -21,7 +21,7 @@ const readRequestBody = (req) => {
         let raw = '';
         req.setEncoding('utf8');
         req.on("data",  (chunk) => { raw += chunk; });
-        req.on("end",   ()      => {
+        req.on("end", () => {
             try { resolve(JSON.parse(raw)); }
             catch { reject(new Error("Invalid JSON")); }
         });
